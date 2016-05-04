@@ -52,13 +52,6 @@ footer span { float: right; font-style: italic; }
   header p { padding-left: 4.5em;}
 }
 
-.thumb {
-  width: 25%;
-  min-width: 100px;
-  float:left;
-  margin-right: 1em;
-}
-
 .content {
   width: 100%;
   display: flex;
@@ -66,22 +59,43 @@ footer span { float: right; font-style: italic; }
 }
 
 .project {
-  margin-bottom:1em;
-  width:100%;
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
 }
 
 .content h2 {
   display: none;
 }
 
+.project .image img {
+  max-width: 100%;
+  min-width: 100px;
+}
+
+.project .image {
+  padding: 2%;
+  flex-basis: 25%;
+}
+
+.project .details {
+  padding: 2%;
+  flex-basis: 75%;
+}
+
 @media only screen and (max-width: 320px) {
 
-  .content h2 {
+  .project {
     display: block;
   }
 
-  .image {
-    display: none;
+  .thumb {
+    margin: 0 auto;
+    display:block;
+  }
+
+  .project .details {
+    text-align: center;
   }
 
 }
