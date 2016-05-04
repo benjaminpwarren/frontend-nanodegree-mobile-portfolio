@@ -35,7 +35,7 @@ header p span { font-size: 0.8em; font-weight: normal;}
   border-top: 1px solid #ccc;
 }
 
-.content { padding: 1em 1em; }
+.content { padding: 1em 1em; width:100%; }
 .content li { list-style-type: none; font-size: 1.1em;}
 /*li img { float:left; padding-right: 1em; }*/
 .project p { font-size: 0.9em; font-style: italic; }
@@ -52,7 +52,7 @@ footer span { float: right; font-style: italic; }
   header p { padding-left: 4.5em;}
 }
 
-.content {
+.projects {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -64,23 +64,34 @@ footer span { float: right; font-style: italic; }
   flex-grow: 1;
 }
 
-.content h2 {
-  display: none;
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
 }
 
-.project .image img {
+.project .thumb {
   max-width: 100%;
   min-width: 100px;
+  width: auto;
+  margin: 0 auto;
+  display: block;
 }
 
 .project .image {
   padding: 2%;
-  flex-basis: 25%;
+  flex-basis: 29.3333%;
 }
 
 .project .details {
   padding: 2%;
-  flex-basis: 75%;
+  padding-left: 0;
+  flex-basis: 62.6666%;
+}
+
+.project-image {
+  margin:0 auto;
+  display: block;
 }
 
 @media only screen and (max-width: 320px) {
@@ -89,9 +100,8 @@ footer span { float: right; font-style: italic; }
     display: block;
   }
 
-  .thumb {
-    margin: 0 auto;
-    display:block;
+  .project .thumb {
+    width: 80%;
   }
 
   .project .details {
@@ -99,3 +109,4 @@ footer span { float: right; font-style: italic; }
   }
 
 }
+
