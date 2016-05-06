@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sample page for Udacity CRP project">
+    <meta name="author" content="Benjamin P. Warren">
+    <title>Benjamin Warren: Portfolio</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        font-size: 100%;
+        overflow-y: scroll;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: none;
+      }
+      body { margin: 0; font-size: 14px; line-height: 1.61; font-weight: 400; }
+      body, button, input, select, textarea { font-family: 'Open Sans', sans-serif; color: #333; }
+
+      a { color: #12C; }
+      a:visited { color: #61C; }
+      a:focus { outline: thin dotted; }
+      a:hover, a:active { color: #c00; outline: 0; }
+
+      b, strong { font-weight: bold; }
+      pre, code { font-family: monospace, monospace; font-size: 1em; }
+      ul, ol { margin: 1em 0; padding: 0 0 0 20px; }
+      img { border: 0; max-width: 100%; }
+
+      body { background: #fff; }
+      header, footer, .container { max-width: 45em; margin: 0 auto; }
+
+      header { padding: 0 0.5em; color: #C90B0B; }
+      header img { border-radius: 40px; float: left; }
+      header p { font-size:1.5em; font-weight: bold; padding-left: 4em;}
+      header p span { font-size: 0.8em; font-weight: normal;}
+
+      .hero { padding: 2em; background-color: #f8f8f8; font-size:1.2em;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+      }
+
+      .content { padding: 1em 1em; width:100%; }
+      .content li { list-style-type: none; font-size: 1.1em;}
+      /*li img { float:left; padding-right: 1em; }*/
+      .project p { font-size: 0.9em; font-style: italic; }
+
+      footer {
+        padding: 0 0.5em;
+        border-top: 1px solid #ccc;
+      }
+      footer span { float: right; font-style: italic; }
+
+      /* Smartphones (portrait) */
+      @media only screen and (max-width: 480px) {
+        body { font-size: 12px;}
+        header p { padding-left: 4.5em;}
+      }
+
+      .projects {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .project {
+        width: 100%;
+        display: flex;
+        flex-grow: 1;
+      }
+
+      .img-fluid {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+      }
+
+      .project .thumb {
+        max-width: 100%;
+        min-width: 100px;
+        width: auto;
+        margin: 0 auto;
+        display: block;
+      }
+
+      .project .image {
+        padding: 2%;
+        flex-basis: 29.3333%;
+      }
+
+      .project .details {
+        padding: 2%;
+        padding-left: 0;
+        flex-basis: 62.6666%;
+      }
+
+      .project-image {
+        margin:0 auto;
+        display: block;
+      }
+
+      @media only screen and (max-width: 320px) {
+
+        .project {
+          display: block;
+        }
+
+        .project .thumb {
+          width: 80%;
+        }
+
+        .project .details {
+          text-align: center;
+        }
+
+      }
+
+    </style>
+
+    <link href="css/print.css" rel="stylesheet" media="print">
+
+    <script>
+      (function(w,g){w['GoogleAnalyticsObject']=g;
+      w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)};w[g].l=1*new Date();})(window,'ga');
+
+      ga('create', 'UA-77245879-1');
+      ga('send', 'pageview');
+    </script>
+    <script src="http://www.google-analytics.com/analytics.js" async></script>
+    <script async src="js/perfmatters.min.js" async></script>
+
+  </head>
+
+  <body>
+    <header>
+      <a href="/"><img src="img/profilepic.jpg"></a>
+      <p>Benjamin Warren<br><span>Web Developer</span></p>
+    </header>
+
+    <div class="container">
+      <div class="hero">
+        <strong>I love web development!</strong> This is a simple portfolio for the Critical Rendering Path project. I decided to use it to showcase one real project I've worked on, and a couple of projects completed earlier in this course. :) <br> Contact me: benjame@email.com
+      </div>
+
+      <div class="content projects">
+
+        <div class="project">
+          <div class="image">
+            <img srcset="img/humanearth_1x.jpg 320w, img/humanearth_2x.jpg 640w, img/humanearth_3x.jpg 960w" sizes="(min-width:630px) 150px, (min-width: 528px) 25vw, 100px" src="img/humanearth_1x.jpg" class="thumb">
+          </div>
+          <div class="details">
+            <a href="project-humanearth.html">Implemented a website design</a>
+            <p>My friend had some ideas and wanted to redesign his website. This is what I put together.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="image">
+            <img srcset="img/frogger-160w.jpg 160w, img/frogger-320w.jpg 320w, img/frogger-523w.jpg 523w" sizes="(min-width:630px) 150px, (min-width: 528px) 25vw, 100px" src="img/frogger-320w.jpg" class="thumb">
+          </div>
+          <div class="details">
+            <a href="project-frogger.html">Built a Frogger Clone</a>
+            <p>I built this Frogger clone on rock and roll &mdash; no, wait, that's not right.<br>
+            This was a project in Udacity's Front End Web Developer nanodegree.</p>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="image">
+            <img srcset="img/benjaminpwarren.github.io-brightontimes-320w.jpg 320w, img/benjaminpwarren.github.io-brightontimes-640w.jpg 640w, img/benjaminpwarren.github.io-brightontimes-960w.jpg 960w" sizes="(min-width:630px) 150px, (min-width: 528px) 25vw, 100px" src="img/benjaminpwarren.github.io-brightontimes-320w.jpg" class="thumb">
+          </div>
+          <div class="details">
+            <a href="project-brightontimes.html">Made a Layout Responsive</a>
+            <p>This was another Udacity project, a responsive redesign of a mock news site.</p>
+          </div>
+        </div>
+
+    </div>
+
+    <footer>
+      <p>&copy; Benjamin Warren 2016<span id="crp-stats"></span></p>
+    </footer>
+
+    <noscript id="deferred-styles">
+      <link href="//fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var deferredStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = deferredStylesNode.textContent;
+        document.body.appendChild(replacement);
+        deferredStylesNode.parentElement.removeChild(deferredStylesNode);
+      };
+
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+  </body>
+</html>
